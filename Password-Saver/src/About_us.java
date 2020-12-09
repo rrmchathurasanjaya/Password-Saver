@@ -94,7 +94,7 @@ public class About_us extends javax.swing.JFrame {
             Desktop desktop = getDesktop();
             desktop.browse(new URI("https://github.com/rrmchathura"));
         } catch (URISyntaxException | IOException ex) {
-            Logger.getLogger(Software_Update_Page.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(About_us.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }//GEN-LAST:event_github_buttonActionPerformed

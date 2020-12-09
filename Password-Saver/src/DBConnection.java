@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
  * @author Chathura
  */
 public class DBConnection {
- Connection con=null;
+ Connection conn=null;
 	public static Connection connectDb()
 	{
 		try {

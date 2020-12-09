@@ -126,7 +126,7 @@ public class Login_Page extends javax.swing.JFrame {
 
         jPanel1.add(jPanel_Login_Page, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, 310, 360));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 550));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 400));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

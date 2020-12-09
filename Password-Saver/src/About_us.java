@@ -38,7 +38,6 @@ public class About_us extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         github_button = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        turnback_button = new javax.swing.JButton();
         rSLabelImage1 = new rojerusan.RSLabelImage();
         rSLabelImage2 = new rojerusan.RSLabelImage();
 
@@ -70,16 +69,6 @@ public class About_us extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 299, 115));
-
-        turnback_button.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        turnback_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/turnback_ico.png"))); // NOI18N
-        turnback_button.setText("Turn Back");
-        turnback_button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                turnback_buttonActionPerformed(evt);
-            }
-        });
-        jPanel1.add(turnback_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 330, 299, 67));
         jPanel1.add(rSLabelImage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, -1, -1));
         jPanel1.add(rSLabelImage2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 20, -1, -1));
 
@@ -102,11 +91,6 @@ public class About_us extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void turnback_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_turnback_buttonActionPerformed
-        // TODO add your handling code here:
-        this.setVisible(false);
-    }//GEN-LAST:event_turnback_buttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -149,6 +133,5 @@ public class About_us extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private rojerusan.RSLabelImage rSLabelImage1;
     private rojerusan.RSLabelImage rSLabelImage2;
-    private javax.swing.JButton turnback_button;
     // End of variables declaration//GEN-END:variables
 }

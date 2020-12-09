@@ -29,12 +29,7 @@ public class Login_Page extends javax.swing.JFrame {
         initComponents();
          conn=DBConnection.connectDb();
     }
- public  void close()
-    {
-        WindowEvent winClosingEvent = new WindowEvent(this, WindowEvent.WINDOW_CLOSING);
-        Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(winClosingEvent);
-        
-    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

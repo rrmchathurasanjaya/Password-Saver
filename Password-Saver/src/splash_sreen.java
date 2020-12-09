@@ -33,6 +33,7 @@ public class splash_sreen extends javax.swing.JFrame {
         jProgressBar1 = new javax.swing.JProgressBar();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        rSLabelImage1 = new rojerusan.RSLabelImage();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -43,20 +44,24 @@ public class splash_sreen extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jProgressBar1.setStringPainted(true);
-        jPanel1.add(jProgressBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 370, 410, 30));
+        jPanel1.add(jProgressBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 500, 410, 30));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("PassBox v1.0.0");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 150, -1, 35));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 450, -1, 35));
 
         jPanel2.setBackground(new java.awt.Color(255, 0, 0));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 690));
+
+        rSLabelImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/photo-1579548122080-c35fd6820ecb.jpg"))); // NOI18N
+        jPanel2.add(rSLabelImage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 610, 700));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, 690));
 
         jLabel2.setText("Welcom");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 60, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 60, -1, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 690));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 690));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -117,5 +122,6 @@ public class splash_sreen extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JProgressBar jProgressBar1;
+    private rojerusan.RSLabelImage rSLabelImage1;
     // End of variables declaration//GEN-END:variables
 }

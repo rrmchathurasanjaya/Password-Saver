@@ -51,7 +51,6 @@ Connection conn=null;
         jButton_UserEdit = new javax.swing.JButton();
         jButton_AddPassword = new javax.swing.JButton();
         jButton_Database = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         software_update_button = new javax.swing.JButton();
         jButton_AboutUs = new javax.swing.JButton();
@@ -102,18 +101,6 @@ Connection conn=null;
             }
         });
         jPanel1.add(jButton_Database, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 140, -1, -1));
-
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/log_file.png"))); // NOI18N
-        jButton1.setText("Log Control");
-        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 140, -1, -1));
 
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/default_user_ico.png"))); // NOI18N
         jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 140, -1, 50));
@@ -197,12 +184,6 @@ Connection conn=null;
         frame.setVisible(true);
     }//GEN-LAST:event_jButton_DatabaseActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        log_control frame_logcontrolpage = new log_control();
-        frame_logcontrolpage.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void software_update_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_software_update_buttonActionPerformed
         // TODO add your handling code here:
       
@@ -261,7 +242,6 @@ Connection conn=null;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel giris_saati_label;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton_AboutUs;
     private javax.swing.JButton jButton_AddPassword;

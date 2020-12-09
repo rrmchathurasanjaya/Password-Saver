@@ -86,7 +86,7 @@ public class splash_sreen extends javax.swing.JFrame {
             }
         });
         
-         Login n=new Login();
+         Login_Page n=new Login_Page();
         try{
             for(int i=0;i<=100;i++)
             {

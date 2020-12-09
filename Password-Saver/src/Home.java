@@ -1,3 +1,11 @@
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Date;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,13 +17,26 @@
  * @author Chathura
  */
 public class Home extends javax.swing.JFrame {
-
-    /**
-     * Creates new form Home
-     */
+Connection conn=null;
+	 ResultSet rs=null;
+	 PreparedStatement pst=null;
+         
+    
+   
+    int id=-1;
     public Home() {
         initComponents();
+        conn=DBConnection.connectDb();
     }
+     public Home(int gid) {
+        initComponents();
+        
+        Date today = new Date();
+        giris_saati_label.setText(today.toString());
+        id=gid;
+        
+    }
+     
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -26,21 +47,182 @@ public class Home extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jPanel1 = new javax.swing.JPanel();
+        jButton_UserEdit = new javax.swing.JButton();
+        jButton_AddPassword = new javax.swing.JButton();
+        jButton_Database = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        software_update_button = new javax.swing.JButton();
+        jButton_AboutUs = new javax.swing.JButton();
+        jButton_ContactMe = new javax.swing.JButton();
+        jButton_Exit = new javax.swing.JButton();
+        jLabel_User_Control_Panel_Page_usercontrolpanel = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        giris_saati_label = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton_UserEdit.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton_UserEdit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/user_edit_ico.png"))); // NOI18N
+        jButton_UserEdit.setText("User Edit");
+        jButton_UserEdit.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton_UserEdit.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton_UserEdit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_UserEditActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton_UserEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, -1, -1));
+
+        jButton_AddPassword.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton_AddPassword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/password_management_ico.png"))); // NOI18N
+        jButton_AddPassword.setText("Manage passwords");
+        jButton_AddPassword.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton_AddPassword.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton_AddPassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_AddPasswordActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton_AddPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, -1, -1));
+
+        jButton_Database.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton_Database.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/database_ico.png"))); // NOI18N
+        jButton_Database.setText("Database");
+        jButton_Database.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton_Database.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton_Database.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_DatabaseActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton_Database, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 140, -1, -1));
+
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/log_file.png"))); // NOI18N
+        jButton1.setText("Log Control");
+        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 140, -1, -1));
+
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/default_user_ico.png"))); // NOI18N
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 140, -1, 50));
+
+        software_update_button.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        software_update_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/software-update.png"))); // NOI18N
+        software_update_button.setText("Software Update");
+        software_update_button.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        software_update_button.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        software_update_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                software_update_buttonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(software_update_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, -1, -1));
+
+        jButton_AboutUs.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton_AboutUs.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/about_me_ico.png"))); // NOI18N
+        jButton_AboutUs.setText("About Us");
+        jButton_AboutUs.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton_AboutUs.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton_AboutUs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_AboutUsActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton_AboutUs, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 210, -1, -1));
+
+        jButton_ContactMe.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton_ContactMe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/contact_me_ico.png"))); // NOI18N
+        jButton_ContactMe.setText("Contact Me");
+        jButton_ContactMe.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton_ContactMe.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton_ContactMe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_ContactMeActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton_ContactMe, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 210, -1, -1));
+
+        jButton_Exit.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton_Exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/exit_ico.png"))); // NOI18N
+        jButton_Exit.setText("Exit");
+        jButton_Exit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_ExitActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton_Exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 220, -1, -1));
+
+        jLabel_User_Control_Panel_Page_usercontrolpanel.setFont(new java.awt.Font("Yu Gothic UI", 1, 20)); // NOI18N
+        jLabel_User_Control_Panel_Page_usercontrolpanel.setText("User Control Panel");
+        jPanel1.add(jLabel_User_Control_Panel_Page_usercontrolpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, -1));
+
+        jLabel1.setText(".........");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 230, -1, -1));
+
+        giris_saati_label.setText("            ");
+        jPanel1.add(giris_saati_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 60, -1, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton_UserEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_UserEditActionPerformed
+        // TODO add your handling code here:
+        user_edit frame = new user_edit(id);
+        frame.setVisible(true);
+    }//GEN-LAST:event_jButton_UserEditActionPerformed
+
+    private void jButton_AddPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_AddPasswordActionPerformed
+        // TODO add your handling code here:
+        manage_pass frame = new manage_pass();
+        frame.setVisible(true);
+    }//GEN-LAST:event_jButton_AddPasswordActionPerformed
+
+    private void jButton_DatabaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_DatabaseActionPerformed
+        // TODO add your handling code here:
+        database_show frame = new database_show();
+        frame.setVisible(true);
+    }//GEN-LAST:event_jButton_DatabaseActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        log_control frame_logcontrolpage = new log_control();
+        frame_logcontrolpage.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void software_update_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_software_update_buttonActionPerformed
+        // TODO add your handling code here:
+      
+    }//GEN-LAST:event_software_update_buttonActionPerformed
+
+    private void jButton_AboutUsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_AboutUsActionPerformed
+        // TODO add your handling code here:
+        About_us frame = new About_us();
+        frame.setVisible(true);
+    }//GEN-LAST:event_jButton_AboutUsActionPerformed
+
+    private void jButton_ContactMeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ContactMeActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButton_ContactMeActionPerformed
+
+    private void jButton_ExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ExitActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jButton_ExitActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +260,18 @@ public class Home extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel giris_saati_label;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton_AboutUs;
+    private javax.swing.JButton jButton_AddPassword;
+    private javax.swing.JButton jButton_ContactMe;
+    private javax.swing.JButton jButton_Database;
+    private javax.swing.JButton jButton_Exit;
+    private javax.swing.JButton jButton_UserEdit;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel_User_Control_Panel_Page_usercontrolpanel;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton software_update_button;
     // End of variables declaration//GEN-END:variables
 }

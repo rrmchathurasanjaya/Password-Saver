@@ -39,6 +39,8 @@ public class manage_pass extends javax.swing.JFrame {
         rSLabelImage2 = new rojerusan.RSLabelImage();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
@@ -138,6 +140,7 @@ public class manage_pass extends javax.swing.JFrame {
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, -1));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton_new_password_addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_new_password_addActionPerformed
@@ -169,7 +172,7 @@ public class manage_pass extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
-        Login_Page ad= new Login_Page();
+        Home ad= new Home();
         ad.setVisible(true);
         hide();
     }//GEN-LAST:event_jLabel10MouseClicked

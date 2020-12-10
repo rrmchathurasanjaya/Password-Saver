@@ -37,7 +37,9 @@ public class create_account extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuItem1 = new javax.swing.JMenuItem();
         jPanel1 = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         fullname_txt = new javax.swing.JTextField();
         username_txt = new javax.swing.JTextField();
@@ -47,52 +49,96 @@ public class create_account extends javax.swing.JFrame {
         email_address_txt = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         mobile_number_txt = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jCheckBox1 = new javax.swing.JCheckBox();
         jLabel6 = new javax.swing.JLabel();
         jCheckBox2 = new javax.swing.JCheckBox();
         jButton1 = new javax.swing.JButton();
-        jButton_Create_a_New_Account_Page_TurnBack_Button = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        rSLabelImage3 = new rojerusan.RSLabelImage();
+        rSLabelImage1 = new rojerusan.RSLabelImage();
+
+        jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/1607607755601.png"))); // NOI18N
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel10MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 20, 30));
+
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Full Name : ");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 177, -1, -1));
-        jPanel1.add(fullname_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 174, 254, -1));
-        jPanel1.add(username_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 200, 254, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
 
+        fullname_txt.setBackground(new java.awt.Color(0, 0, 0));
+        fullname_txt.setForeground(new java.awt.Color(255, 255, 255));
+        fullname_txt.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(204, 0, 0)));
+        fullname_txt.setCaretColor(new java.awt.Color(255, 0, 51));
+        jPanel1.add(fullname_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 254, -1));
+
+        username_txt.setBackground(new java.awt.Color(0, 0, 0));
+        username_txt.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(240, 0, 0)));
+        jPanel1.add(username_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 254, -1));
+
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Username : ");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(313, 203, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Password : ");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 229, -1, -1));
-        jPanel1.add(password_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 226, 254, -1));
-        jPanel1.add(email_address_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 252, 254, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
 
+        password_txt.setBackground(new java.awt.Color(0, 0, 0));
+        password_txt.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(240, 0, 0)));
+        jPanel1.add(password_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 254, -1));
+
+        email_address_txt.setBackground(new java.awt.Color(0, 0, 0));
+        email_address_txt.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(240, 0, 0)));
+        jPanel1.add(email_address_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 254, 30));
+
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("E-Mail Address :");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(294, 255, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, -1, -1));
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Mobile Number :");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(294, 281, -1, -1));
-        jPanel1.add(mobile_number_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 278, 254, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, -1, -1));
 
+        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel9.setFont(new java.awt.Font("Baskerville Old Face", 1, 30)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Create Account");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 220, 50));
+
+        mobile_number_txt.setBackground(new java.awt.Color(0, 0, 0));
+        mobile_number_txt.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(240, 0, 0)));
+        jPanel1.add(mobile_number_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 254, -1));
+
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Confidentiality Agreement : ");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(294, 309, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, -1, -1));
 
         jCheckBox1.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 jCheckBox1ItemStateChanged(evt);
             }
         });
-        jPanel1.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(447, 309, -1, 14));
+        jPanel1.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 430, -1, 20));
 
-        jLabel6.setText("Contract : ");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(492, 309, -1, -1));
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Contract                          : ");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, -1, -1));
 
         jCheckBox2.setEnabled(false);
         jCheckBox2.addItemListener(new java.awt.event.ItemListener() {
@@ -100,8 +146,14 @@ public class create_account extends javax.swing.JFrame {
                 jCheckBox2ItemStateChanged(evt);
             }
         });
-        jPanel1.add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(562, 309, -1, 14));
+        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 460, -1, 20));
 
+        jButton1.setBackground(new java.awt.Color(255, 0, 0));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/register_ico.png"))); // NOI18N
         jButton1.setText("Register");
         jButton1.setEnabled(false);
@@ -110,18 +162,26 @@ public class create_account extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(415, 334, 220, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 250, -1));
 
-        jButton_Create_a_New_Account_Page_TurnBack_Button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/turnback_ico.png"))); // NOI18N
-        jButton_Create_a_New_Account_Page_TurnBack_Button.setText("Turn Back");
-        jButton_Create_a_New_Account_Page_TurnBack_Button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_Create_a_New_Account_Page_TurnBack_ButtonActionPerformed(evt);
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel8.setText("x");
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
             }
         });
-        jPanel1.add(jButton_Create_a_New_Account_Page_TurnBack_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(294, 334, -1, -1));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, 20, 30));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 930, 550));
+        rSLabelImage3.setForeground(new java.awt.Color(255, 255, 255));
+        rSLabelImage3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/1607591829931.jpg"))); // NOI18N
+        jPanel1.add(rSLabelImage3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 270, 510));
+
+        rSLabelImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/1607591593769.png"))); // NOI18N
+        jPanel1.add(rSLabelImage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 550));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 550));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -167,12 +227,19 @@ public class create_account extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton_Create_a_New_Account_Page_TurnBack_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Create_a_New_Account_Page_TurnBack_ButtonActionPerformed
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
-        Login_Page frame = new Login_Page();
-        frame.setVisible(true);
-    }//GEN-LAST:event_jButton_Create_a_New_Account_Page_TurnBack_ButtonActionPerformed
+    }//GEN-LAST:event_jCheckBox2ActionPerformed
+
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+        Home ad= new Home();
+        ad.setVisible(true);
+        hide();
+    }//GEN-LAST:event_jLabel10MouseClicked
 
     /**
      * @param args the command line arguments
@@ -213,19 +280,24 @@ public class create_account extends javax.swing.JFrame {
     private javax.swing.JTextField email_address_txt;
     private javax.swing.JTextField fullname_txt;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton_Create_a_New_Account_Page_TurnBack_Button;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField mobile_number_txt;
     private javax.swing.JPasswordField password_txt;
+    private rojerusan.RSLabelImage rSLabelImage1;
+    private rojerusan.RSLabelImage rSLabelImage3;
     private javax.swing.JTextField username_txt;
     // End of variables declaration//GEN-END:variables
 }

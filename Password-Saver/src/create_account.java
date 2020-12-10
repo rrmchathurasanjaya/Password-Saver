@@ -63,6 +63,7 @@ public class create_account extends javax.swing.JFrame {
         jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
@@ -85,11 +86,12 @@ public class create_account extends javax.swing.JFrame {
         fullname_txt.setForeground(new java.awt.Color(255, 255, 255));
         fullname_txt.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(204, 0, 0)));
         fullname_txt.setCaretColor(new java.awt.Color(255, 0, 51));
-        jPanel1.add(fullname_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 254, -1));
+        jPanel1.add(fullname_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 254, 30));
 
         username_txt.setBackground(new java.awt.Color(0, 0, 0));
+        username_txt.setForeground(new java.awt.Color(255, 255, 255));
         username_txt.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(240, 0, 0)));
-        jPanel1.add(username_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 254, -1));
+        jPanel1.add(username_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 254, 30));
 
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Username : ");
@@ -100,10 +102,12 @@ public class create_account extends javax.swing.JFrame {
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
 
         password_txt.setBackground(new java.awt.Color(0, 0, 0));
+        password_txt.setForeground(new java.awt.Color(255, 255, 255));
         password_txt.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(240, 0, 0)));
-        jPanel1.add(password_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 254, -1));
+        jPanel1.add(password_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 254, 30));
 
         email_address_txt.setBackground(new java.awt.Color(0, 0, 0));
+        email_address_txt.setForeground(new java.awt.Color(255, 255, 255));
         email_address_txt.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(240, 0, 0)));
         jPanel1.add(email_address_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 254, 30));
 
@@ -113,7 +117,7 @@ public class create_account extends javax.swing.JFrame {
 
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Mobile Number :");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, -1, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, -1, -1));
 
         jLabel9.setBackground(new java.awt.Color(255, 255, 255));
         jLabel9.setFont(new java.awt.Font("Baskerville Old Face", 1, 30)); // NOI18N
@@ -122,8 +126,9 @@ public class create_account extends javax.swing.JFrame {
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 220, 50));
 
         mobile_number_txt.setBackground(new java.awt.Color(0, 0, 0));
+        mobile_number_txt.setForeground(new java.awt.Color(255, 255, 255));
         mobile_number_txt.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(240, 0, 0)));
-        jPanel1.add(mobile_number_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 254, -1));
+        jPanel1.add(mobile_number_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 254, 30));
 
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Confidentiality Agreement : ");
@@ -154,6 +159,7 @@ public class create_account extends javax.swing.JFrame {
         jPanel1.add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 460, -1, 20));
 
         jButton1.setBackground(new java.awt.Color(255, 0, 0));
+        jButton1.setFont(new java.awt.Font("Teko SemiBold", 1, 11)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/register_ico.png"))); // NOI18N
         jButton1.setText("Register");
         jButton1.setEnabled(false);
@@ -184,6 +190,7 @@ public class create_account extends javax.swing.JFrame {
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 550));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jCheckBox1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCheckBox1ItemStateChanged

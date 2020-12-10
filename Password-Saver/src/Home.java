@@ -213,6 +213,7 @@ Connection conn=null;
         // TODO add your handling code here:
         user_edit frame = new user_edit(id);
         frame.setVisible(true);
+        this.hide();
     }//GEN-LAST:event_jButton_UserEditActionPerformed
 
     private void jButton_AddPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_AddPasswordActionPerformed

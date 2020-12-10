@@ -30,11 +30,14 @@ public class splash_sreen extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jProgressBar1 = new javax.swing.JProgressBar();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         rSLabelImage1 = new rojerusan.RSLabelImage();
-        jLabel2 = new javax.swing.JLabel();
+        jProgressBar1 = new javax.swing.JProgressBar();
+        rSLabelImage2 = new rojerusan.RSLabelImage();
+        rSPanelCircleImage1 = new rojerusan.RSPanelCircleImage();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -43,25 +46,36 @@ public class splash_sreen extends javax.swing.JFrame {
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jProgressBar1.setStringPainted(true);
-        jPanel1.add(jProgressBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 500, 410, 30));
+        jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
+        jLabel2.setText("PASSBOX");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 280, 120));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("PassBox v1.0.0");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 450, -1, 35));
+        jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
+        jLabel1.setText("WELCOME TO ");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 480, 110));
+
+        jLabel3.setFont(new java.awt.Font("Arial Narrow", 1, 36)); // NOI18N
+        jLabel3.setText("                                 LOADING...");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 670, 50));
 
         jPanel2.setBackground(new java.awt.Color(255, 0, 0));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        rSLabelImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/photo-1579548122080-c35fd6820ecb.jpg"))); // NOI18N
-        jPanel2.add(rSLabelImage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 610, 700));
+        rSLabelImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/passbox 1.png"))); // NOI18N
+        jPanel2.add(rSLabelImage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, -10, 220, 200));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, 690));
+        jProgressBar1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jProgressBar1.setStringPainted(true);
+        jPanel2.add(jProgressBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 470, 590, 30));
 
-        jLabel2.setText("Welcom");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 60, -1, -1));
+        rSLabelImage2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/blue.png"))); // NOI18N
+        rSLabelImage2.setText("");
+        jPanel2.add(rSLabelImage2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, -20, 720, 690));
+        jPanel2.add(rSPanelCircleImage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 30, -1, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 690));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 730, 660));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 660));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -119,9 +133,12 @@ public class splash_sreen extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JProgressBar jProgressBar1;
     private rojerusan.RSLabelImage rSLabelImage1;
+    private rojerusan.RSLabelImage rSLabelImage2;
+    private rojerusan.RSPanelCircleImage rSPanelCircleImage1;
     // End of variables declaration//GEN-END:variables
 }

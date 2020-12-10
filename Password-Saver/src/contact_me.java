@@ -94,7 +94,7 @@ public class contact_me extends javax.swing.JFrame {
         });
         jPanel1.add(jButton_MailSend_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(397, 394, 180, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 850, 550));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 550));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

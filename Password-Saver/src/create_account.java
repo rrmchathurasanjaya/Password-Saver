@@ -1,3 +1,11 @@
+
+import java.awt.event.ItemEvent;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,12 +17,15 @@
  * @author Chathura
  */
 public class create_account extends javax.swing.JFrame {
-
+ Connection conn=null;
+	 ResultSet rs=null;
+	 PreparedStatement pst=null;
     /**
      * Creates new form create_account
      */
     public create_account() {
         initComponents();
+         conn=DBConnection.connectDb();
     }
 
     /**
@@ -26,21 +37,142 @@ public class create_account extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jPanel1 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        fullname_txt = new javax.swing.JTextField();
+        username_txt = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        password_txt = new javax.swing.JPasswordField();
+        email_address_txt = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        mobile_number_txt = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jLabel6 = new javax.swing.JLabel();
+        jCheckBox2 = new javax.swing.JCheckBox();
+        jButton1 = new javax.swing.JButton();
+        jButton_Create_a_New_Account_Page_TurnBack_Button = new javax.swing.JButton();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel7.setText("Full Name : ");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 177, -1, -1));
+        jPanel1.add(fullname_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 174, 254, -1));
+        jPanel1.add(username_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 200, 254, -1));
+
+        jLabel1.setText("Username : ");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(313, 203, -1, -1));
+
+        jLabel2.setText("Password : ");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 229, -1, -1));
+        jPanel1.add(password_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 226, 254, -1));
+        jPanel1.add(email_address_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 252, 254, -1));
+
+        jLabel3.setText("E-Mail Address :");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(294, 255, -1, -1));
+
+        jLabel4.setText("Mobile Number :");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(294, 281, -1, -1));
+        jPanel1.add(mobile_number_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 278, 254, -1));
+
+        jLabel5.setText("Confidentiality Agreement : ");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(294, 309, -1, -1));
+
+        jCheckBox1.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jCheckBox1ItemStateChanged(evt);
+            }
+        });
+        jPanel1.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(447, 309, -1, 14));
+
+        jLabel6.setText("Contract : ");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(492, 309, -1, -1));
+
+        jCheckBox2.setEnabled(false);
+        jCheckBox2.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jCheckBox2ItemStateChanged(evt);
+            }
+        });
+        jPanel1.add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(562, 309, -1, 14));
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/register_ico.png"))); // NOI18N
+        jButton1.setText("Register");
+        jButton1.setEnabled(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(415, 334, 220, -1));
+
+        jButton_Create_a_New_Account_Page_TurnBack_Button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/turnback_ico.png"))); // NOI18N
+        jButton_Create_a_New_Account_Page_TurnBack_Button.setText("Turn Back");
+        jButton_Create_a_New_Account_Page_TurnBack_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_Create_a_New_Account_Page_TurnBack_ButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton_Create_a_New_Account_Page_TurnBack_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(294, 334, -1, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 930, 550));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jCheckBox1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCheckBox1ItemStateChanged
+        // TODO add your handling code here:
+        int secili=evt.getStateChange();
+        int secili_degil = evt.getStateChange();
+        if(secili == ItemEvent.SELECTED)
+        jCheckBox2.setEnabled(true);
+        else
+        jCheckBox2.setEnabled(false);
+    }//GEN-LAST:event_jCheckBox1ItemStateChanged
+
+    private void jCheckBox2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCheckBox2ItemStateChanged
+        int secili=evt.getStateChange();
+        int secili_degil = evt.getStateChange();
+        if(secili == ItemEvent.SELECTED)
+        jButton1.setEnabled(true);
+        else
+        jButton1.setEnabled(false);
+
+    }//GEN-LAST:event_jCheckBox2ItemStateChanged
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        String sql = "INSERT INTO `passbox_db`.`users_tb`(`fullname`,`username`,`password`,`email_address`,`mobile_number`)VALUES(?,?,?,?,?);";
+        try {
+            pst=conn.prepareStatement(sql);
+            pst.setString(1, fullname_txt.getText());
+            pst.setString(2, username_txt.getText());
+            pst.setString(3, password_txt.getText());
+            pst.setString(4, email_address_txt.getText());
+            pst.setString(5, mobile_number_txt.getText());
+            int x= pst.executeUpdate();
+            if(x==1)
+            JOptionPane.showMessageDialog(null,"Create Account Sucessfully");
+            else
+            JOptionPane.showMessageDialog(null,"Error");
+        } catch (SQLException ex) {
+            JOptionPane.showConfirmDialog(null, "Error !"+ex);
+        }
+
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton_Create_a_New_Account_Page_TurnBack_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Create_a_New_Account_Page_TurnBack_ButtonActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        Login_Page frame = new Login_Page();
+        frame.setVisible(true);
+    }//GEN-LAST:event_jButton_Create_a_New_Account_Page_TurnBack_ButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +210,22 @@ public class create_account extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField email_address_txt;
+    private javax.swing.JTextField fullname_txt;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton_Create_a_New_Account_Page_TurnBack_Button;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField mobile_number_txt;
+    private javax.swing.JPasswordField password_txt;
+    private javax.swing.JTextField username_txt;
     // End of variables declaration//GEN-END:variables
 }

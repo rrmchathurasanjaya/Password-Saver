@@ -207,10 +207,10 @@ Connection conn=null;
             +"',password='"+password+"',email_address='"+email+"',mobile_number='"+mobile+"' where fullname='"+fullname+"'";
             pst=conn.prepareStatement(sql);
             pst.execute();
-            JOptionPane.showMessageDialog(null,"Güncelleme işlemi gerçekleşti");
+            JOptionPane.showMessageDialog(null,"Update Sucessfully");
 
         } catch (SQLException ex) {
-            JOptionPane.showConfirmDialog(null, "Sorgu da hata var "+ex);
+            JOptionPane.showConfirmDialog(null, "eroor "+ex);
         }
     }//GEN-LAST:event_jButton_UpdateActionPerformed
 

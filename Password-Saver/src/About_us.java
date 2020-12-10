@@ -36,17 +36,57 @@ public class About_us extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        rSLabelImage1 = new rojerusan.RSLabelImage();
+        jLabel5 = new javax.swing.JLabel();
+        rSLabelImage2 = new rojerusan.RSLabelImage();
         github_button = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        rSLabelImage1 = new rojerusan.RSLabelImage();
-        rSLabelImage2 = new rojerusan.RSLabelImage();
+        rSLabelImage4 = new rojerusan.RSLabelImage();
+        rSLabelImage3 = new rojerusan.RSLabelImage();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Baskerville Old Face", 1, 30)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("About Us ");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, -1, -1));
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/1607607755601.png"))); // NOI18N
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel10MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 20, 30));
+
+        rSLabelImage1.setBackground(new java.awt.Color(0, 0, 0));
+        rSLabelImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/3.jpg"))); // NOI18N
+        jPanel1.add(rSLabelImage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, 190, 140));
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel5.setText("x");
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, 20, 30));
+
+        rSLabelImage2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/2.jpeg"))); // NOI18N
+        jPanel1.add(rSLabelImage2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 190, 140));
+
+        github_button.setBackground(new java.awt.Color(204, 204, 204));
         github_button.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        github_button.setForeground(new java.awt.Color(153, 153, 153));
         github_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/github-logo.png"))); // NOI18N
         github_button.setText("GitHub");
         github_button.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -56,9 +96,11 @@ public class About_us extends javax.swing.JFrame {
                 github_buttonActionPerformed(evt);
             }
         });
-        jPanel1.add(github_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 250, 299, 115));
+        jPanel1.add(github_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 460, 130, 60));
 
+        jButton2.setBackground(new java.awt.Color(204, 204, 204));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(153, 153, 153));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/website.png"))); // NOI18N
         jButton2.setText("Website");
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -68,13 +110,18 @@ public class About_us extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 299, 115));
-        jPanel1.add(rSLabelImage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, -1, -1));
-        jPanel1.add(rSLabelImage2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 20, -1, -1));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 460, 130, 60));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 540));
+        rSLabelImage4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/1607591829931.jpg"))); // NOI18N
+        jPanel1.add(rSLabelImage4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 270, 510));
+
+        rSLabelImage3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/1607591593769.png"))); // NOI18N
+        jPanel1.add(rSLabelImage3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 540));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 540));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void github_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_github_buttonActionPerformed
@@ -91,6 +138,16 @@ public class About_us extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_jLabel5MouseClicked
+
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+        Login_Page ad= new Login_Page();
+        ad.setVisible(true);
+        hide();
+    }//GEN-LAST:event_jLabel10MouseClicked
 
     /**
      * @param args the command line arguments
@@ -130,8 +187,13 @@ public class About_us extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton github_button;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private rojerusan.RSLabelImage rSLabelImage1;
     private rojerusan.RSLabelImage rSLabelImage2;
+    private rojerusan.RSLabelImage rSLabelImage3;
+    private rojerusan.RSLabelImage rSLabelImage4;
     // End of variables declaration//GEN-END:variables
 }

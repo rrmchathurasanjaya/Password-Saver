@@ -27,11 +27,16 @@ public class manage_pass extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        jButton_database_view = new javax.swing.JButton();
         jButton_new_password_add = new javax.swing.JButton();
         jButton_password_delete = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton_database_view = new javax.swing.JButton();
-        jButton_TurnBack = new javax.swing.JButton();
+        rSLabelImage3 = new rojerusan.RSLabelImage();
+        rSLabelImage2 = new rojerusan.RSLabelImage();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -39,7 +44,65 @@ public class manage_pass extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setFont(new java.awt.Font("Bookman Old Style", 1, 30)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Manage ");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Baskerville Old Face", 1, 30)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Password");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 150, -1));
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel5.setText("x");
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, 20, 30));
+
+        jButton1.setBackground(new java.awt.Color(0, 0, 0));
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/database_update_ico.png"))); // NOI18N
+        jButton1.setText("Password Update");
+        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 240, -1));
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/1607607755601.png"))); // NOI18N
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel10MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 20, 30));
+
+        jButton_database_view.setBackground(new java.awt.Color(0, 0, 0));
+        jButton_database_view.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton_database_view.setForeground(new java.awt.Color(255, 255, 255));
+        jButton_database_view.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/database_password_view_ico.png"))); // NOI18N
+        jButton_database_view.setText("Database View");
+        jButton_database_view.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton_database_view.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton_database_view.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_database_viewActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton_database_view, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 240, -1));
+
+        jButton_new_password_add.setBackground(new java.awt.Color(0, 0, 0));
         jButton_new_password_add.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton_new_password_add.setForeground(new java.awt.Color(255, 255, 255));
         jButton_new_password_add.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/add_password_ico.png"))); // NOI18N
         jButton_new_password_add.setText("New Password Add");
         jButton_new_password_add.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -50,9 +113,11 @@ public class manage_pass extends javax.swing.JFrame {
                 jButton_new_password_addActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton_new_password_add, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 40, -1, -1));
+        jPanel1.add(jButton_new_password_add, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 240, -1));
 
+        jButton_password_delete.setBackground(new java.awt.Color(51, 51, 51));
         jButton_password_delete.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton_password_delete.setForeground(new java.awt.Color(255, 255, 255));
         jButton_password_delete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/password_delete_ico.png"))); // NOI18N
         jButton_password_delete.setText("Password Delete");
         jButton_password_delete.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -62,45 +127,15 @@ public class manage_pass extends javax.swing.JFrame {
                 jButton_password_deleteActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton_password_delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 110, -1, -1));
+        jPanel1.add(jButton_password_delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 240, -1));
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/database_update_ico.png"))); // NOI18N
-        jButton1.setText("Password Update");
-        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, -1, -1));
+        rSLabelImage3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/1607591829931.jpg"))); // NOI18N
+        jPanel1.add(rSLabelImage3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 270, 510));
 
-        jButton_database_view.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton_database_view.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/database_password_view_ico.png"))); // NOI18N
-        jButton_database_view.setText("Database View");
-        jButton_database_view.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton_database_view.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton_database_view.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_database_viewActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton_database_view, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 260, -1, -1));
+        rSLabelImage2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/1607591593769.png"))); // NOI18N
+        jPanel1.add(rSLabelImage2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 540));
 
-        jButton_TurnBack.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton_TurnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/turnback_ico.png"))); // NOI18N
-        jButton_TurnBack.setText("Turn Back");
-        jButton_TurnBack.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton_TurnBack.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton_TurnBack.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_TurnBackActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton_TurnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 330, -1, -1));
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 420));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -129,10 +164,15 @@ public class manage_pass extends javax.swing.JFrame {
         frame_databaseview.setVisible(true);
     }//GEN-LAST:event_jButton_database_viewActionPerformed
 
-    private void jButton_TurnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_TurnBackActionPerformed
-        // TODO add your handling code here:
-        this.setVisible(false);
-    }//GEN-LAST:event_jButton_TurnBackActionPerformed
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_jLabel5MouseClicked
+
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+        Login_Page ad= new Login_Page();
+        ad.setVisible(true);
+        hide();
+    }//GEN-LAST:event_jLabel10MouseClicked
 
     /**
      * @param args the command line arguments
@@ -171,10 +211,15 @@ public class manage_pass extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton_TurnBack;
     private javax.swing.JButton jButton_database_view;
     private javax.swing.JButton jButton_new_password_add;
     private javax.swing.JButton jButton_password_delete;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
+    private rojerusan.RSLabelImage rSLabelImage2;
+    private rojerusan.RSLabelImage rSLabelImage3;
     // End of variables declaration//GEN-END:variables
 }

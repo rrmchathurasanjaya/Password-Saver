@@ -37,7 +37,6 @@ public class splash_sreen extends javax.swing.JFrame {
         rSLabelImage1 = new rojerusan.RSLabelImage();
         jProgressBar1 = new javax.swing.JProgressBar();
         rSLabelImage2 = new rojerusan.RSLabelImage();
-        rSPanelCircleImage1 = new rojerusan.RSPanelCircleImage();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -70,14 +69,14 @@ public class splash_sreen extends javax.swing.JFrame {
 
         rSLabelImage2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/blue.png"))); // NOI18N
         rSLabelImage2.setText("");
-        jPanel2.add(rSLabelImage2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, -20, 720, 690));
-        jPanel2.add(rSPanelCircleImage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 30, -1, -1));
+        jPanel2.add(rSLabelImage2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 550));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 730, 660));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 530));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 660));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, -1));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -139,6 +138,5 @@ public class splash_sreen extends javax.swing.JFrame {
     private javax.swing.JProgressBar jProgressBar1;
     private rojerusan.RSLabelImage rSLabelImage1;
     private rojerusan.RSLabelImage rSLabelImage2;
-    private rojerusan.RSPanelCircleImage rSPanelCircleImage1;
     // End of variables declaration//GEN-END:variables
 }

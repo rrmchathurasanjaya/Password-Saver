@@ -5,6 +5,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -58,6 +60,7 @@ Connection conn=null;
         jLabel_User_Control_Panel_Page_usercontrolpanel = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         giris_saati_label = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         rSLabelImage3 = new rojerusan.RSLabelImage();
         rSLabelImage1 = new rojerusan.RSLabelImage();
@@ -171,6 +174,16 @@ Connection conn=null;
         giris_saati_label.setText("            ");
         jPanel1.add(giris_saati_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 60, -1, -1));
 
+        jLabel4.setFont(new java.awt.Font("Teko SemiBold", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel4.setText("Logout");
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
+
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 0));
         jLabel5.setText("x");
@@ -233,6 +246,15 @@ Connection conn=null;
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
         System.exit(0);
     }//GEN-LAST:event_jLabel5MouseClicked
+private JFrame frame1;
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+         frame1 = new JFrame("Logout");
+        if (JOptionPane.showConfirmDialog(frame1,"Confirm if you want to Logout","Home",
+            JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION){
+        this.dispose();//to close the current jframe
+        new Login_Page().setVisible(true);
+        };
+    }//GEN-LAST:event_jLabel4MouseClicked
 
     /**
      * @param args the command line arguments
@@ -279,6 +301,7 @@ Connection conn=null;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel_User_Control_Panel_Page_usercontrolpanel;
     private javax.swing.JPanel jPanel1;

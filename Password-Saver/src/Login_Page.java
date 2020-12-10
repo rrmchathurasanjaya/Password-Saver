@@ -49,8 +49,6 @@ public class Login_Page extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         rSLabelImage2 = new rojerusan.RSLabelImage();
         jLabel_Login_Panel_password = new javax.swing.JLabel();
-        rSLabelImage4 = new rojerusan.RSLabelImage();
-        rSLabelImage5 = new rojerusan.RSLabelImage();
         jLabel5 = new javax.swing.JLabel();
         username_txt = new javax.swing.JTextField();
         rSLabelImage3 = new rojerusan.RSLabelImage();
@@ -103,7 +101,7 @@ public class Login_Page extends javax.swing.JFrame {
                 jButton_Login_Page_Contact_MeMouseClicked(evt);
             }
         });
-        jPanel1.add(jButton_Login_Page_Contact_Me, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 492, 80, 30));
+        jPanel1.add(jButton_Login_Page_Contact_Me, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 490, 80, 30));
 
         jButton_Login_Page_Forgot_Account_Button.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 1, 14)); // NOI18N
         jButton_Login_Page_Forgot_Account_Button.setForeground(new java.awt.Color(255, 0, 0));
@@ -128,18 +126,12 @@ public class Login_Page extends javax.swing.JFrame {
 
         rSLabelImage2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(111, 254, 255))); // NOI18N
         rSLabelImage2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/1607592763738.png"))); // NOI18N
-        jPanel1.add(rSLabelImage2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 130, 120));
+        jPanel1.add(rSLabelImage2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, 110, 110));
 
         jLabel_Login_Panel_password.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel_Login_Panel_password.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_Login_Panel_password.setText("Password : ");
         jPanel1.add(jLabel_Login_Panel_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, -1, 30));
-
-        rSLabelImage4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/1607593096119.jpeg"))); // NOI18N
-        jPanel1.add(rSLabelImage4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 490, 30, 30));
-
-        rSLabelImage5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/1607593212017.jpg"))); // NOI18N
-        jPanel1.add(rSLabelImage5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 490, 30, 30));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 0));
@@ -263,8 +255,6 @@ public class Login_Page extends javax.swing.JFrame {
     private rojerusan.RSLabelImage rSLabelImage1;
     private rojerusan.RSLabelImage rSLabelImage2;
     private rojerusan.RSLabelImage rSLabelImage3;
-    private rojerusan.RSLabelImage rSLabelImage4;
-    private rojerusan.RSLabelImage rSLabelImage5;
     private javax.swing.JTextField username_txt;
     // End of variables declaration//GEN-END:variables
 }

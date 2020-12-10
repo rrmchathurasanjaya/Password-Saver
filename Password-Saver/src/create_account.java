@@ -243,7 +243,7 @@ public class create_account extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBox2ActionPerformed
 
     private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
-        Home ad= new Home();
+        Login_Page ad= new Login_Page();
         ad.setVisible(true);
         hide();
     }//GEN-LAST:event_jLabel10MouseClicked

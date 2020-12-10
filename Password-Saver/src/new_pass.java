@@ -37,62 +37,27 @@ Connection conn=null;
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel_socail_media_name = new javax.swing.JLabel();
-        socail_media_name_txt = new javax.swing.JTextField();
-        jLabel_username = new javax.swing.JLabel();
-        username_txt = new javax.swing.JTextField();
-        jLabel_password = new javax.swing.JLabel();
-        password_txt = new javax.swing.JTextField();
-        jLabel_email_address = new javax.swing.JLabel();
-        email_address_txt = new javax.swing.JTextField();
-        jButton_TurnBack = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        email_address_txt = new javax.swing.JTextField();
+        password_txt = new javax.swing.JTextField();
+        username_txt = new javax.swing.JTextField();
+        socail_media_name_txt = new javax.swing.JTextField();
+        jLabel_email_address = new javax.swing.JLabel();
+        jLabel_password = new javax.swing.JLabel();
+        jLabel_username = new javax.swing.JLabel();
+        jLabel_socail_media_name = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        rSLabelImage3 = new rojerusan.RSLabelImage();
+        jLabel5 = new javax.swing.JLabel();
+        rSLabelImage2 = new rojerusan.RSLabelImage();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(153, 153, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel_socail_media_name.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel_socail_media_name.setText("Social Media Name : ");
-        jPanel1.add(jLabel_socail_media_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, -1, -1));
-
-        socail_media_name_txt.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jPanel1.add(socail_media_name_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(308, 147, 205, -1));
-
-        jLabel_username.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel_username.setText("Username : ");
-        jPanel1.add(jLabel_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 176, -1, -1));
-
-        username_txt.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jPanel1.add(username_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(308, 173, 205, -1));
-
-        jLabel_password.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel_password.setText("Password : ");
-        jPanel1.add(jLabel_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(241, 202, -1, -1));
-
-        password_txt.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jPanel1.add(password_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(308, 199, 205, -1));
-
-        jLabel_email_address.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel_email_address.setText("E-Mail Address : ");
-        jPanel1.add(jLabel_email_address, new org.netbeans.lib.awtextra.AbsoluteConstraints(212, 228, -1, -1));
-
-        email_address_txt.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jPanel1.add(email_address_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(308, 225, 205, -1));
-
-        jButton_TurnBack.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton_TurnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/turnback_ico.png"))); // NOI18N
-        jButton_TurnBack.setText("Turn Back");
-        jButton_TurnBack.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton_TurnBack.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton_TurnBack.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_TurnBackActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton_TurnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(186, 312, 151, 90));
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/add_new_password_ico.png"))); // NOI18N
@@ -104,20 +69,96 @@ Connection conn=null;
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(347, 312, 166, 90));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 460, 240, 60));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 550));
+        jLabel1.setFont(new java.awt.Font("Baskerville Old Face", 1, 30)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("New Password");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, -1));
+
+        email_address_txt.setBackground(new java.awt.Color(0, 0, 0));
+        email_address_txt.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        email_address_txt.setForeground(new java.awt.Color(255, 255, 255));
+        email_address_txt.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(240, 0, 0)));
+        jPanel1.add(email_address_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 408, 250, 30));
+
+        password_txt.setBackground(new java.awt.Color(0, 0, 0));
+        password_txt.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        password_txt.setForeground(new java.awt.Color(255, 255, 255));
+        password_txt.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(240, 0, 0)));
+        jPanel1.add(password_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 250, 30));
+
+        username_txt.setBackground(new java.awt.Color(0, 0, 0));
+        username_txt.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        username_txt.setForeground(new java.awt.Color(255, 255, 255));
+        username_txt.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(240, 0, 0)));
+        username_txt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                username_txtActionPerformed(evt);
+            }
+        });
+        jPanel1.add(username_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 250, 30));
+
+        socail_media_name_txt.setBackground(new java.awt.Color(0, 0, 0));
+        socail_media_name_txt.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        socail_media_name_txt.setForeground(new java.awt.Color(255, 255, 255));
+        socail_media_name_txt.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(240, 0, 0)));
+        jPanel1.add(socail_media_name_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 250, 30));
+
+        jLabel_email_address.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_email_address.setText("E-Mail Address : ");
+        jPanel1.add(jLabel_email_address, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, -1, -1));
+
+        jLabel_password.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_password.setText("Password : ");
+        jPanel1.add(jLabel_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, 20));
+
+        jLabel_username.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_username.setText("Username : ");
+        jPanel1.add(jLabel_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
+
+        jLabel_socail_media_name.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_socail_media_name.setText("Social Media Name : ");
+        jPanel1.add(jLabel_socail_media_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/1607607755601.png"))); // NOI18N
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel10MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 20, 30));
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel6.setText("x");
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, 20, 30));
+
+        rSLabelImage3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/1607591829931.jpg"))); // NOI18N
+        jPanel1.add(rSLabelImage3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 270, 510));
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel5.setText("x");
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, 20, 30));
+
+        rSLabelImage2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/1607591593769.png"))); // NOI18N
+        jPanel1.add(rSLabelImage2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 540));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton_TurnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_TurnBackActionPerformed
-        // TODO add your handling code here:
-        Home ad = new Home ();
-         ad.setVisible(true);
-         this.dispose();
-        
-    }//GEN-LAST:event_jButton_TurnBackActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -137,6 +178,24 @@ Connection conn=null;
             JOptionPane.showConfirmDialog(null, "error !"+ex);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_jLabel5MouseClicked
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_jLabel6MouseClicked
+
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+        manage_pass ad= new manage_pass();
+        ad.setVisible(true);
+        hide();
+    }//GEN-LAST:event_jLabel10MouseClicked
+
+    private void username_txtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_username_txtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_username_txtActionPerformed
 
     /**
      * @param args the command line arguments
@@ -176,13 +235,18 @@ Connection conn=null;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField email_address_txt;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton_TurnBack;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel_email_address;
     private javax.swing.JLabel jLabel_password;
     private javax.swing.JLabel jLabel_socail_media_name;
     private javax.swing.JLabel jLabel_username;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField password_txt;
+    private rojerusan.RSLabelImage rSLabelImage2;
+    private rojerusan.RSLabelImage rSLabelImage3;
     private javax.swing.JTextField socail_media_name_txt;
     private javax.swing.JTextField username_txt;
     // End of variables declaration//GEN-END:variables

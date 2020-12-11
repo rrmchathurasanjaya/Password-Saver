@@ -35,14 +35,16 @@ public class About_us extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        rSFotoSquareResize1 = new rojerusan.RSFotoSquareResize();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        rSLabelImage1 = new rojerusan.RSLabelImage();
         jLabel5 = new javax.swing.JLabel();
-        rSLabelImage2 = new rojerusan.RSLabelImage();
-        github_button = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        rSPanelCircleImage1 = new rojerusan.RSPanelCircleImage();
+        rSPanelCircleImage2 = new rojerusan.RSPanelCircleImage();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         rSLabelImage4 = new rojerusan.RSLabelImage();
         rSLabelImage3 = new rojerusan.RSLabelImage();
 
@@ -67,10 +69,6 @@ public class About_us extends javax.swing.JFrame {
         });
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 20, 30));
 
-        rSLabelImage1.setBackground(new java.awt.Color(0, 0, 0));
-        rSLabelImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/3.jpg"))); // NOI18N
-        jPanel1.add(rSLabelImage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, 190, 140));
-
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 0));
         jLabel5.setText("x");
@@ -81,36 +79,46 @@ public class About_us extends javax.swing.JFrame {
         });
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, 20, 30));
 
-        rSLabelImage2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/2.jpeg"))); // NOI18N
-        jPanel1.add(rSLabelImage2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 190, 140));
+        rSPanelCircleImage1.setColorBorde(new java.awt.Color(204, 0, 0));
+        rSPanelCircleImage1.setImagen(new javax.swing.ImageIcon(getClass().getResource("/ico/2.jpeg"))); // NOI18N
+        jPanel1.add(rSPanelCircleImage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, 110, 110));
 
-        github_button.setBackground(new java.awt.Color(204, 204, 204));
-        github_button.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        github_button.setForeground(new java.awt.Color(153, 153, 153));
-        github_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/github-logo.png"))); // NOI18N
-        github_button.setText("GitHub");
-        github_button.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        github_button.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        github_button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                github_buttonActionPerformed(evt);
+        rSPanelCircleImage2.setColorBorde(new java.awt.Color(204, 0, 0));
+        rSPanelCircleImage2.setImagen(new javax.swing.ImageIcon(getClass().getResource("/ico/3.jpg"))); // NOI18N
+        jPanel1.add(rSPanelCircleImage2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 110, 110));
+
+        jLabel2.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/1607673005803.png"))); // NOI18N
+        jLabel2.setText("Website");
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
             }
         });
-        jPanel1.add(github_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 460, 130, 60));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
 
-        jButton2.setBackground(new java.awt.Color(204, 204, 204));
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(153, 153, 153));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/website.png"))); // NOI18N
-        jButton2.setText("Website");
-        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+        jLabel3.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/1607672879951.png"))); // NOI18N
+        jLabel3.setText("Github");
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 460, 130, 60));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 270, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/1607672879951.png"))); // NOI18N
+        jLabel4.setText("Github");
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, -1, -1));
 
         rSLabelImage4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/1607591829931.jpg"))); // NOI18N
         jPanel1.add(rSLabelImage4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 270, 510));
@@ -124,30 +132,47 @@ public class About_us extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void github_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_github_buttonActionPerformed
-        try {
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_jLabel5MouseClicked
+
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+        Home ad= new Home();
+        ad.setVisible(true);
+        hide();
+    }//GEN-LAST:event_jLabel10MouseClicked
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+            try {
+            // TODO add your handling code here:
+            Desktop desktop = getDesktop();
+            desktop.browse(new URI("https://freesourcecodelk.blogspot.com/"));
+        } catch (URISyntaxException | IOException ex) {
+            Logger.getLogger(About_us.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+            try {
             // TODO add your handling code here:
             Desktop desktop = getDesktop();
             desktop.browse(new URI("https://github.com/rrmchathura"));
         } catch (URISyntaxException | IOException ex) {
             Logger.getLogger(About_us.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }//GEN-LAST:event_jLabel4MouseClicked
 
-    }//GEN-LAST:event_github_buttonActionPerformed
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+          try {
+            // TODO add your handling code here:
+            Desktop desktop = getDesktop();
+            desktop.browse(new URI("https://github.com/PiyumiAnjula894"));
+        } catch (URISyntaxException | IOException ex) {
+            Logger.getLogger(About_us.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-        System.exit(0);
-    }//GEN-LAST:event_jLabel5MouseClicked
-
-    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
-        Login_Page ad= new Login_Page();
-        ad.setVisible(true);
-        hide();
-    }//GEN-LAST:event_jLabel10MouseClicked
+    }//GEN-LAST:event_jLabel3MouseClicked
 
     /**
      * @param args the command line arguments
@@ -185,15 +210,17 @@ public class About_us extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton github_button;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private rojerusan.RSLabelImage rSLabelImage1;
-    private rojerusan.RSLabelImage rSLabelImage2;
+    private rojerusan.RSFotoSquareResize rSFotoSquareResize1;
     private rojerusan.RSLabelImage rSLabelImage3;
     private rojerusan.RSLabelImage rSLabelImage4;
+    private rojerusan.RSPanelCircleImage rSPanelCircleImage1;
+    private rojerusan.RSPanelCircleImage rSPanelCircleImage2;
     // End of variables declaration//GEN-END:variables
 }

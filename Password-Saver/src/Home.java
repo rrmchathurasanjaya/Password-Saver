@@ -75,7 +75,7 @@ Connection conn=null;
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton_UserEdit.setBackground(new java.awt.Color(0, 0, 0));
-        jButton_UserEdit.setFont(new java.awt.Font("Yu Gothic Medium", 1, 11)); // NOI18N
+        jButton_UserEdit.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         jButton_UserEdit.setForeground(new java.awt.Color(255, 255, 255));
         jButton_UserEdit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/user_edit_ico.png"))); // NOI18N
         jButton_UserEdit.setText("User Edit");
@@ -89,7 +89,7 @@ Connection conn=null;
         jPanel1.add(jButton_UserEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 203, 140, 80));
 
         jButton_AddPassword.setBackground(new java.awt.Color(0, 0, 0));
-        jButton_AddPassword.setFont(new java.awt.Font("Yu Gothic Medium", 1, 11)); // NOI18N
+        jButton_AddPassword.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         jButton_AddPassword.setForeground(new java.awt.Color(255, 255, 255));
         jButton_AddPassword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/password_management_ico.png"))); // NOI18N
         jButton_AddPassword.setText("Manage passwords");
@@ -103,7 +103,7 @@ Connection conn=null;
         jPanel1.add(jButton_AddPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, 140, 90));
 
         jButton_Database.setBackground(new java.awt.Color(0, 0, 0));
-        jButton_Database.setFont(new java.awt.Font("Yu Gothic Medium", 1, 11)); // NOI18N
+        jButton_Database.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         jButton_Database.setForeground(new java.awt.Color(255, 255, 255));
         jButton_Database.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/database_ico.png"))); // NOI18N
         jButton_Database.setText("Database");
@@ -122,7 +122,7 @@ Connection conn=null;
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, -1, -1));
 
         software_update_button.setBackground(new java.awt.Color(0, 0, 0));
-        software_update_button.setFont(new java.awt.Font("Yu Gothic Medium", 1, 11)); // NOI18N
+        software_update_button.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         software_update_button.setForeground(new java.awt.Color(255, 255, 255));
         software_update_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/software-update.png"))); // NOI18N
         software_update_button.setText("Software Update");
@@ -136,7 +136,7 @@ Connection conn=null;
         jPanel1.add(software_update_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 140, 90));
 
         jButton_AboutUs.setBackground(new java.awt.Color(0, 0, 0));
-        jButton_AboutUs.setFont(new java.awt.Font("Yu Gothic Medium", 1, 11)); // NOI18N
+        jButton_AboutUs.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         jButton_AboutUs.setForeground(new java.awt.Color(255, 255, 255));
         jButton_AboutUs.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/about_me_ico.png"))); // NOI18N
         jButton_AboutUs.setText("About Us");
@@ -150,7 +150,7 @@ Connection conn=null;
         jPanel1.add(jButton_AboutUs, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, 130, 90));
 
         jButton_ContactMe.setBackground(new java.awt.Color(0, 0, 0));
-        jButton_ContactMe.setFont(new java.awt.Font("Yu Gothic Medium", 1, 11)); // NOI18N
+        jButton_ContactMe.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         jButton_ContactMe.setForeground(new java.awt.Color(255, 255, 255));
         jButton_ContactMe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/contact_me_ico.png"))); // NOI18N
         jButton_ContactMe.setText("Contact Me");
@@ -220,12 +220,14 @@ Connection conn=null;
         // TODO add your handling code here:
         manage_pass frame = new manage_pass();
         frame.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton_AddPasswordActionPerformed
 
     private void jButton_DatabaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_DatabaseActionPerformed
         // TODO add your handling code here:
         database_show frame = new database_show();
         frame.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton_DatabaseActionPerformed
 
     private void software_update_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_software_update_buttonActionPerformed
@@ -237,6 +239,7 @@ Connection conn=null;
         // TODO add your handling code here:
         About_us frame = new About_us();
         frame.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton_AboutUsActionPerformed
 
     private void jButton_ContactMeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ContactMeActionPerformed

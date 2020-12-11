@@ -51,6 +51,7 @@ public class forgot extends javax.swing.JFrame {
         id = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         pass = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
         rSLabelImage4 = new rojerusan.RSLabelImage();
         rSLabelImage2 = new rojerusan.RSLabelImage();
 
@@ -160,6 +161,12 @@ public class forgot extends javax.swing.JFrame {
         pass.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(204, 0, 0)));
         jPanel1.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, 250, 30));
 
+        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel9.setFont(new java.awt.Font("Baskerville Old Face", 1, 30)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Forgot Password");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 250, 50));
+
         rSLabelImage4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/1607591829931.jpg"))); // NOI18N
         jPanel1.add(rSLabelImage4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 270, 510));
 
@@ -252,6 +259,7 @@ public class forgot extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField mobile;
     private javax.swing.JTextField pass;

@@ -1,3 +1,9 @@
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,12 +15,15 @@
  * @author Chathura
  */
 public class forgot extends javax.swing.JFrame {
-
+        Connection conn=null;
+	 ResultSet rs=null;
+	 PreparedStatement pst=null;
     /**
      * Creates new form forgot
      */
     public forgot() {
         initComponents();
+        conn=DBConnection.connectDb();
     }
 
     /**
@@ -26,21 +35,175 @@ public class forgot extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jPanel1 = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        txtUsername = new javax.swing.JTextField();
+        btnSearch = new rojerusan.RSButtonHover();
+        jLabel2 = new javax.swing.JLabel();
+        txtFullname = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        email = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        mobile = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        id = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        pass = new javax.swing.JTextField();
+        rSLabelImage4 = new rojerusan.RSLabelImage();
+        rSLabelImage2 = new rojerusan.RSLabelImage();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/1607607755601.png"))); // NOI18N
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel10MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 20, 30));
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel5.setText("x");
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, 20, 30));
+
+        jLabel1.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Username");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, 20));
+
+        txtUsername.setBackground(new java.awt.Color(0, 0, 0));
+        txtUsername.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        txtUsername.setForeground(new java.awt.Color(0, 0, 255));
+        txtUsername.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(204, 0, 0)));
+        jPanel1.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 250, 30));
+
+        btnSearch.setBackground(new java.awt.Color(255, 102, 102));
+        btnSearch.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        btnSearch.setColorHover(new java.awt.Color(0, 153, 51));
+        btnSearch.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        btnSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 30, 30));
+
+        jLabel2.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Full Name");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, -1, -1));
+
+        txtFullname.setEditable(false);
+        txtFullname.setBackground(new java.awt.Color(0, 0, 0));
+        txtFullname.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        txtFullname.setForeground(new java.awt.Color(0, 204, 0));
+        txtFullname.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(204, 0, 0)));
+        jPanel1.add(txtFullname, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 250, 30));
+
+        jLabel3.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Email");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, -1, -1));
+
+        email.setEditable(false);
+        email.setBackground(new java.awt.Color(0, 0, 0));
+        email.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        email.setForeground(new java.awt.Color(0, 204, 0));
+        email.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(204, 0, 0)));
+        jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 250, 30));
+
+        jLabel4.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Mobile");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, -1, -1));
+
+        mobile.setEditable(false);
+        mobile.setBackground(new java.awt.Color(0, 0, 0));
+        mobile.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        mobile.setForeground(new java.awt.Color(0, 204, 0));
+        mobile.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(204, 0, 0)));
+        jPanel1.add(mobile, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 250, 30));
+
+        jLabel6.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("ID");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
+
+        id.setBackground(new java.awt.Color(0, 0, 0));
+        id.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        id.setForeground(new java.awt.Color(255, 255, 255));
+        id.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(204, 0, 0)));
+        jPanel1.add(id, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 210, 30));
+
+        jLabel7.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Password");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, -1, -1));
+
+        pass.setBackground(new java.awt.Color(0, 0, 0));
+        pass.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        pass.setForeground(new java.awt.Color(0, 0, 255));
+        pass.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(204, 0, 0)));
+        jPanel1.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, 250, 30));
+
+        rSLabelImage4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/1607591829931.jpg"))); // NOI18N
+        jPanel1.add(rSLabelImage4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 270, 510));
+
+        rSLabelImage2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/1607591593769.png"))); // NOI18N
+        jPanel1.add(rSLabelImage2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 540));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 540));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_jLabel5MouseClicked
+
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+        Login_Page ad= new Login_Page();
+        ad.setVisible(true);
+        hide();
+    }//GEN-LAST:event_jLabel10MouseClicked
+
+    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
+        String ID=id.getText();
+        String sql="Select fullname,username,email_address,mobile_number,password from users_tb where id='"+ID+"'";
+        try{
+            pst=conn.prepareStatement(sql);
+            rs=pst.executeQuery();
+            while(rs.next())
+            {
+                txtFullname.setText(rs.getString(1));
+                txtUsername.setText(rs.getString(2));
+                email.setText(rs.getString(3));
+                mobile.setText(rs.getString(4));
+                pass.setText(rs.getString(5));
+
+            }
+
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }//GEN-LAST:event_btnSearchActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +241,23 @@ public class forgot extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private rojerusan.RSButtonHover btnSearch;
+    private javax.swing.JTextField email;
+    private javax.swing.JTextField id;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField mobile;
+    private javax.swing.JTextField pass;
+    private rojerusan.RSLabelImage rSLabelImage2;
+    private rojerusan.RSLabelImage rSLabelImage4;
+    private javax.swing.JTextField txtFullname;
+    private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
 }

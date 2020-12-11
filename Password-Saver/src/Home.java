@@ -243,7 +243,9 @@ Connection conn=null;
     }//GEN-LAST:event_jButton_AboutUsActionPerformed
 
     private void jButton_ContactMeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ContactMeActionPerformed
-        // TODO add your handling code here:
+        contact_me frame = new contact_me();
+        frame.setVisible(true);
+        this.dispose();
         
     }//GEN-LAST:event_jButton_ContactMeActionPerformed
 

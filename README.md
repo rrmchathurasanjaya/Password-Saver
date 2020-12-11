@@ -1,3 +1,3 @@
 # Password-Saver
-Splash Screen
+# Splash Screen
 ![](Password-Saver/screenshots/Capture.PNG)

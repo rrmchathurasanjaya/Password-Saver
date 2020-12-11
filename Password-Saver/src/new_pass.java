@@ -54,6 +54,8 @@ Connection conn=null;
         rSLabelImage2 = new rojerusan.RSLabelImage();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(153, 153, 255));
@@ -74,13 +76,13 @@ Connection conn=null;
         jLabel1.setFont(new java.awt.Font("Baskerville Old Face", 1, 30)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("New Password");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, -1, -1));
 
         email_address_txt.setBackground(new java.awt.Color(0, 0, 0));
         email_address_txt.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         email_address_txt.setForeground(new java.awt.Color(255, 255, 255));
         email_address_txt.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(240, 0, 0)));
-        jPanel1.add(email_address_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 408, 250, 30));
+        jPanel1.add(email_address_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 250, 30));
 
         password_txt.setBackground(new java.awt.Color(0, 0, 0));
         password_txt.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -105,18 +107,22 @@ Connection conn=null;
         socail_media_name_txt.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(240, 0, 0)));
         jPanel1.add(socail_media_name_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 250, 30));
 
+        jLabel_email_address.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel_email_address.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_email_address.setText("E-Mail Address : ");
         jPanel1.add(jLabel_email_address, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, -1, -1));
 
+        jLabel_password.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel_password.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_password.setText("Password : ");
         jPanel1.add(jLabel_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, 20));
 
+        jLabel_username.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel_username.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_username.setText("Username : ");
         jPanel1.add(jLabel_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
 
+        jLabel_socail_media_name.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel_socail_media_name.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_socail_media_name.setText("Social Media Name : ");
         jPanel1.add(jLabel_socail_media_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
@@ -158,6 +164,7 @@ Connection conn=null;
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 540));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

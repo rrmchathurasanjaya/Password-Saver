@@ -43,7 +43,6 @@ public class Login_Page extends javax.swing.JFrame {
         jLabel_Login_Page_username = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton_Login_Page_Create_New_Account = new javax.swing.JButton();
-        jButton_Login_Page_Contact_Me = new javax.swing.JLabel();
         jButton_Login_Page_Forgot_Account_Button = new javax.swing.JLabel();
         password_txt = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
@@ -91,17 +90,6 @@ public class Login_Page extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton_Login_Page_Create_New_Account, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 230, 30));
-
-        jButton_Login_Page_Contact_Me.setBackground(new java.awt.Color(255, 255, 255));
-        jButton_Login_Page_Contact_Me.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 20)); // NOI18N
-        jButton_Login_Page_Contact_Me.setForeground(new java.awt.Color(255, 255, 255));
-        jButton_Login_Page_Contact_Me.setText("Contact Us");
-        jButton_Login_Page_Contact_Me.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton_Login_Page_Contact_MeMouseClicked(evt);
-            }
-        });
-        jPanel1.add(jButton_Login_Page_Contact_Me, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 490, 80, 30));
 
         jButton_Login_Page_Forgot_Account_Button.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 1, 14)); // NOI18N
         jButton_Login_Page_Forgot_Account_Button.setForeground(new java.awt.Color(255, 0, 0));
@@ -196,11 +184,6 @@ public class Login_Page extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton_Login_Page_Contact_MeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton_Login_Page_Contact_MeMouseClicked
-         contact_me frame = new contact_me();
-        frame.setVisible(true);
-    }//GEN-LAST:event_jButton_Login_Page_Contact_MeMouseClicked
-
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
         System.exit(0);
     }//GEN-LAST:event_jLabel5MouseClicked
@@ -243,7 +226,6 @@ public class Login_Page extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jButton_Login_Page_Contact_Me;
     private javax.swing.JButton jButton_Login_Page_Create_New_Account;
     private javax.swing.JLabel jButton_Login_Page_Forgot_Account_Button;
     private javax.swing.JLabel jLabel1;
